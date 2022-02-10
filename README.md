@@ -2,6 +2,7 @@
 UNCC Online FinTech Bootcamp Module 11 Challenge due by 11:59pm 2/20/2022
 
 ![](Images/time_analysis_title-banner.jpeg)
+
 image from [www.analyticssteps.com](https://www.analyticssteps.com/blogs/introduction-time-series-analysis-time-series-forecasting-machine-learning-methods-models)
 
 ---
