@@ -58,6 +58,32 @@ prior to running these libraries, install them from the command line:
 ## Usage
 
  - Visual depictions of seasonality (as measured by Google Search traffic) that are of interest to the company.
+ 
+#### Seasonality 1: Day of Week
+
+![](Images/seasonality_dayofweek.png)
+
+Our first look at seasonality shows more search traffic occurring earlier in the week (Day 0 = Monday), peaking on Day 1/Tuesday and declining over the rest of the week.
+
+Here's a look at how python datetime translates the numerical day of the week:
+
+![](Images/datetime_dayofweek_meaning.png)
+
+image from [Geeks for Geeks](https://www.geeksforgeeks.org/python-datetime-weekday-method-with-example/)
+
+#### Seasonality 2: Daily/Hourly traffic
+
+![](Images/hourly_traffic_heatmap.png)
+
+At first glance, it looks like a lot of people shopping in the middle of the night starting around 9pm - 3am, especially Monday-Thursday. However, we must recall that Google Trends data is based on UTC, and most of MercadoLibre's users are in UTC-3:00 (Eastern Brazil and Argentina); and the rest could be in 3 earlier time zones (i.e. UTC-4,5,6, such as Venezuela, Columbia and Mexico). Therefore, the traffic is actually starting around 8/9am local times (12n UTC), peaking 6/7pm local (10pm UTC), and tapering off around midnight locally (4:00am UTC).
+
+#### MercadoLibre Distribution of Revenue by Region, 2019-2020 from [Statista.com](https://www.statista.com/statistics/730392/mercadolibre-revenue-region-share/)
+
+![](Images/mercadolibre_revenue_region_2019_2020.png)
+
+
+[Reference: World Atlas South America Time Zones](https://www.worldatlas.com/continents/south-america/timezones.html)
+![](Images/south_america_time_zones.png)
 
  - An evaluation of how the company’s stock price correlates to its Google Search traffic.
 
