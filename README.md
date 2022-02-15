@@ -57,9 +57,9 @@ prior to running these libraries, install them from the command line:
 
 ## Usage
 
- - Visual depictions of seasonality (as measured by Google Search traffic) that are of interest to the company.
+ 1. Visual depictions of seasonality (as measured by Google Search traffic) that are of interest to the company.
  
-#### Seasonality 1: Day of Week
+### Seasonality 1: Day of Week
 
 ![](Images/seasonality_dayofweek.png)
 
@@ -71,7 +71,7 @@ Here's a look at how python datetime translates the numerical day of the week:
 
 image from [Geeks for Geeks](https://www.geeksforgeeks.org/python-datetime-weekday-method-with-example/)
 
-#### Seasonality 2: Daily/Hourly traffic
+### Seasonality 2: Daily/Hourly traffic
 
 ![](Images/hourly_traffic_heatmap.png)
 
@@ -85,11 +85,39 @@ At first glance, it looks like a lot of people shopping in the middle of the nig
 [Reference: World Atlas South America Time Zones](https://www.worldatlas.com/continents/south-america/timezones.html)
 ![](Images/south_america_time_zones.png)
 
- - An evaluation of how the company’s stock price correlates to its Google Search traffic.
+### Seasonality 3: Week of Year
 
- - A Prophet forecast model that can predict hourly user search traffic.
+![](Images/weekly_plot_40-52.png)
 
- - A plot of a forecast for the company’s future revenue.
+We can see a trend up between months 40-52, although the 52nd week has a significant drop, perhaps reflecting that Christmas shopping is over (and, of course, they're spending time with family and not shopping online for a few days).
+
+---
+
+ 2. An evaluation of how the company’s stock price correlates to its Google Search traffic.
+#### MercadoLibre Stock Closing Price 2015-2020
+![](Images/mercado_stock_price.png)
+The correlation between lagged search traffic and stock volatility is -0.12 (weak inverse); and between lagged search traffic and stock price returns is 0.018 (weakly positive).
+
+![](Images/correlation.png)
+
+---
+
+ 3. A Prophet forecast model that can predict hourly user search traffic.
+ ![](Images/mercado_hourly_forecast.png)  
+ According to the original data, looks like around midnight. However, one might be able to argue that if this is UTC time then the actual busiest time of day is more like 7-9pm since Latin America's time zones are around 3-5 hrs behind UTC.
+ 
+ ---
+
+ 4. A plot of a forecast for the company’s future revenue.
+ #### MercadoLibre Daily Revenues
+ ![](Images/mercado_sales.png)
+ #### Forecast of Future Revenues
+ ![](Images/mercado_forecast_all.png)
+ ![](Images/forecast_revenues.png)
+ **Answer:** Sales forecast for the next quarter:
+ - Best case: USD \$2.12 billion;
+ - Worst case: USD \$1.77 billion;
+ - Most Likely Case: USD \$1.94 billion.
 
 ---
 
